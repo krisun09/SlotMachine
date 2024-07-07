@@ -1,16 +1,15 @@
 <script>
-    import { browser } from '$app/environment';
+  import { browser } from "$app/environment";
 
-    let component = undefined;
+  let component = undefined;
 
-    $: if(browser) {
-        import("../stories/Game.svelte")
-            .then(data => {
-            component = data.default;
-        });
-    }
+  $: if (browser) {
+    import("../components/Game.svelte").then((data) => {
+      component = data.default;
+    });
+  }
 </script>
 
 {#if browser && component}
-    <svelte:component this={component} />
+  <svelte:component this={component} />
 {/if}
