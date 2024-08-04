@@ -1,9 +1,11 @@
 <script lang="ts">
   import { Sprite } from "pixi-svelte";
 
+  // export let id: number;
+  // export let index: number;
   export let symbol: string;
 
-  const SIZES = { width: 50, height: 50 };
+  const SIZES = { width: 70, height: 70 };
 </script>
 
-<Sprite key={symbol} {...SIZES} />
+<Sprite key={symbol} {...SIZES}/>
